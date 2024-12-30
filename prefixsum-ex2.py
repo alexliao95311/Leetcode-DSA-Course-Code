@@ -17,3 +17,18 @@ def waysToSplitArray(self, nums):
             if first_sum >= second_sum:
                 ans += 1
         return ans
+
+
+#optimize space - don't need array at all!
+class Solution:
+    def waysToSplitArray(self, nums: List[int]) -> int:
+        total = sum(nums)
+        ans = 0
+        first_sum = 0
+        for split in range(len(nums)-1):
+            first_sum += nums[split]
+            second_sum = total - first_sum
+            if first_sum >= second_sum:
+                ans += 1
+        return ans
+
