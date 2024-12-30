@@ -21,7 +21,7 @@ def waysToSplitArray(self, nums):
 
 #optimize space - don't need array at all!
 class Solution:
-    def waysToSplitArray(self, nums: List[int]) -> int:
+    def waysToSplitArray(self, nums):
         total = sum(nums)
         ans = 0
         first_sum = 0
